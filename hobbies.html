@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies - My Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="1.js" defer></script>
+   
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background-image">
+        <div class="heading">My Hobbies</div>
+        <div class="title">
+            <p>Every person has something that inspires them.</p>
+            <p>I have those sources of inspiration as well.</p>
+        </div>
+        <ul class="hobbies-list">
+            <li>Listening to music</li>
+            <li>Drawing</li>
+            <li>Mobilography</li>
+        </ul>
+    </div>
+
+
+    <section class="music-slider">
+        <h2 class="slider-title">Embrace the Art of Creation</h2>
+        <h2 class="slider-title">My Favorite Music</h2>
+        <div class="slider-container">
+            <div class="slider-item" onclick="playMusic('MACAN, SCIRENA-IVL.mp3')">IVL</div>
+            <div class="slider-item" onclick="playMusic('Mona Songz-Сағынам.mp3')">Сағынам</div>
+            <div class="slider-item" onclick="playMusic('Kazybek-Алыстама менен.mp3')">Алыстама менен</div>
+            <div class="slider-item" onclick="playMusic('Rauf   Faik - Голубые глаза.mp3')"> Голубые глаза</div>
+            <div class="slider-item" onclick="playMusic('Billie Eilish - 6.18.18 (song for xxxtentacion).mp3')">6.18.18</div>
+           
+        </div>
+        <audio id="audio-player" controls style="display: none;"></audio>
+    </section>
+    
+  
+    
+
+<section class="media-slider">
+    <h2 class="media-title">Watch, Appreciate, and Enjoy</h2>
+    <div class="slider-container">
+        <div class="slider-item" onclick="openModal('iko1.mp4')">
+            <video width="150" controls>
+                <source src="iko1.MP4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Video 1</p>
+        </div>
+        <div class="slider-item">
+            <img src="iko2.jpg" alt="Photo 1" width="150">
+            <p>Photo 1</p>
+        </div>
+        <div class="slider-item" onclick="openModal('iko3.mp4')">
+            <video width="150" controls>
+                <source src="iko3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Video 2</p>
+        </div>
+        <div class="slider-item" onclick="openModal('iko4.mp4')">
+            <video width="150" controls>
+                <source src="iko4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Video 3</p>
+        </div>
+        <div class="slider-item" onclick="openModal('iko5.mp4')">
+            <video width="150" controls>
+                <source src="iko5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Video 4</p>
+        </div>
+    </div>
+
+
+    <div id="videoModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <video id="modalVideo" controls></video>
+    </div>
+</section>
+    <script>
+        function playMusic(file) {
+            const audioPlayer = document.getElementById('audio-player');
+            audioPlayer.src = file;
+            audioPlayer.play();
+            audioPlayer.style.display = 'block';
+        }
+    </script>
+
+
+
+
+
+        
+    <footer>
+        <p>&copy; 2024 Aigerim. All rights reserved.</p>
+    </footer>
+</body>
+</html>
